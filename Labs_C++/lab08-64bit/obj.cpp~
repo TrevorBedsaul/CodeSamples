@@ -1,0 +1,8 @@
+#include "obj.h"
+
+using namespace std;
+
+Obj::Obj() {
+
+}
+

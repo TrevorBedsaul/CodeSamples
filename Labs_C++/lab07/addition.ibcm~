@@ -1,0 +1,31 @@
+C00A 000       jmp    start    skip around variables
+0000 001 a     dw     0        int a
+0000 002 b     dw     0        int b
+0000 003 c     dw     0        int c
+0000 004 s     dw     0        int s
+0000 005                       space for changes
+0000 006
+0000 007
+0000 008
+0000 009
+1000 00A start readH           read a
+4001 00B       store  a
+4004 00C       store  s        s = a
+1000 00D       readH           read b
+4002 00E       store  b
+5004 00F       add    s        b + s
+4004 010       store  s        s += b
+1000 011       readH           read c
+4003 012       store  c
+5004 013       add    s        c + s
+4004 014       store  s        s += c
+1800 015       printH          print s
+D018 016       jmpe   xit      if(s == 0) goto xit
+C00A 017       jmp    start    goto start
+3001 018 xit   load   a        print a
+1800 019       printH
+3002 01A       load   b        print b
+1800 01B       printH          
+3003 01C       load   c        print c
+1800 01D       printH
+0000 01E       halt            halt

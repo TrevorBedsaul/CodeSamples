@@ -1,0 +1,30 @@
+	.text
+	.intel_syntax noprefix
+	.file	"obj.cpp"
+	.globl	_ZN3ObjC2Ev
+	.align	16, 0x90
+	.type	_ZN3ObjC2Ev,@function
+_ZN3ObjC2Ev:                            # @_ZN3ObjC2Ev
+	.cfi_startproc
+# BB#0:
+	push	rbp
+.Ltmp0:
+	.cfi_def_cfa_offset 16
+.Ltmp1:
+	.cfi_offset rbp, -16
+	mov	rbp, rsp
+.Ltmp2:
+	.cfi_def_cfa_register rbp
+	mov	qword ptr [rbp - 8], rdi
+	pop	rbp
+	ret
+.Lfunc_end0:
+	.size	_ZN3ObjC2Ev, .Lfunc_end0-_ZN3ObjC2Ev
+	.cfi_endproc
+
+
+	.globl	_ZN3ObjC1Ev
+	.type	_ZN3ObjC1Ev,@function
+_ZN3ObjC1Ev = _ZN3ObjC2Ev
+	.ident	"clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)"
+	.section	".note.GNU-stack","",@progbits

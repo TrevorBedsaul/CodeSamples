@@ -1,0 +1,42 @@
+/*Trevor Bedsaul*/
+/*tdb7mw*/
+/*linkedlist.c*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct listNode {
+  struct listNode *next;
+  int value;
+};
+
+struct linkedList {
+  struct listNode *tail, *head;
+};
+
+
+int main() {
+  struct linkedList *list;
+  int n;
+  printf("Enter n: ");
+  scanf("%d", &n);
+  list = (struct linkedList *) malloc(sizeof (struct listNode) * n);
+  list->head->next = list->tail;
+  int i, x;
+  for(i = 0; i < n; i++) {
+    struct listNode *tmp; //new node
+    printf("Enter value %d: ", i); //prompts for value
+    scanf("%d", &x); //value for new node
+    tmp->value = n;
+    list->tail->next = tmp;
+    list->tail = tmp;
+  }
+  int j, y;
+  for(j = 0; j < n;  j++) {
+    printf("%d", list->head->value);
+    free(list->head);
+    list->head = list->head->next;
+  }
+  return 0;
+}
+  

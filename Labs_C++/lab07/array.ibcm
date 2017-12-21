@@ -1,0 +1,39 @@
+C013 000       jmp    start    skip around variables
+0000 001 i     dw     0        int i
+0000 002 zero  dw     0
+0001 003 one   dw     1
+0008 004 n     dw     8        int n
+0007 005 max   dw     a[0]     int max (set to first value in array)
+0007 006 a     dw     007      int a[]
+0005 007 a[0]  dw     5        int a[0] = 5
+000C 008 a[1]  dw     12       int a[1] = 12
+0002 009 a[2]  dw     2        int a[2] = 2
+0000 00A a[3]  dw     0        int a[3] = 0
+0016 00B a[4]  dw     22       int a[4] = 22
+0015 00C a[5]  dw     21       int a[5] = 21
+000F 00D a[6]  dw     15       int a[6] = 15
+0003 00E a[7]  dw     3        int a[7] = 3
+3000 00F ldit  dw     3000
+0000 010                       leave space for changes 
+0000 011 
+0000 012 
+3004 013 start load   n        if( i >= n ) goto xit
+6001 014       sub    i
+E024 015       jmpl   xit
+D024 016       jmpe   xit
+300F 017       load   ldit     form instruction to load a[i]
+5006 018       add    a
+5001 019       add    i
+401B 01A       store  doit     plant instruction to load a[i]
+0000 01B doit  dw     0        if ( a[i]-max < 0 ) goto incr
+6005 01C       sub    max
+E020 01D       jmpl   incr
+5005 01E       add    max
+4005 01F       store  max
+3001 020 incr  load   i        i += 1
+5003 021       add    one
+4001 022       store  i
+C013 023       jmp    start    goto start
+3005 024 xit   load   max      print max
+1800 025       printH
+0000 026       halt

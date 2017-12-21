@@ -1,0 +1,20 @@
+      jmp    start    skip around variables
+n     dw     
+i     dw     0
+one   dw     1
+ldit  dw     3000
+start load   n        if ( i>= n ) goto xit
+      sub    i
+      jmpl   xit
+      jmpe   xit
+      load   ldit     form instruction to load next hex
+      add    i
+      store  doit
+doit  dw     0        load memory address
+      printH          print hex at memory address
+      load   i
+      add    one
+      store  i
+      jmp    start
+xit   halt
+      

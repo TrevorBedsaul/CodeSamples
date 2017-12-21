@@ -1,0 +1,18 @@
+C005 000       jmp    start    skip around variables
+0011 001 n     dw     11
+0000 002 i     dw     0
+0001 003 one   dw     1
+3000 004 ldit  dw     3000
+3001 005 start load   n        if ( i> n ) goto xit
+6002 006       sub    i
+E011 007       jmpl   xit
+3004 008       load   ldit     form instruction to load next hex
+5002 009       add    i
+400B 00A       store  doit
+0000 00B doit  dw     0        load memory address
+1800 00C       printH          print hex at memory address
+3002 00D       load   i
+5003 00E       add    one
+4002 00F       store  i
+C005 010       jmp    start
+0000 011 xit   halt

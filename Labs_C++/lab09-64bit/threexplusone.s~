@@ -1,0 +1,21 @@
+;;; Trevor Bedsaul
+;;; tdb7mw
+;;; threexplusone.s
+
+	global threexplusone
+
+	section .text
+
+threexplusone:
+	;; Prologue
+	xor rax, rax		; zero out return register
+
+start:
+	cmp 	rdi, 1		; if x = 1, return 1
+	je	one
+	
+
+
+one:
+	mov rax, 1
+	ret

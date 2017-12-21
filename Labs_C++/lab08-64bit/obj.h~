@@ -1,0 +1,9 @@
+using namespace std;
+
+class Obj{
+ public:
+  Obj();
+ private:
+  int a;
+  char b;
+}

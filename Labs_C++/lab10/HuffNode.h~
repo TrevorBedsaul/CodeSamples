@@ -1,0 +1,28 @@
+//Trevor Bedsaul
+//tdb7mw
+//HuffNode.h
+
+#ifndef HUFFNODE_H
+#define HUFFNODE_H
+
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+
+class HuffNode {
+ public:
+  HuffNode();
+  HuffNode(int & val, const char & a);
+  bool isLeaf();
+  
+
+ private:
+  char c;
+  int f;
+  HuffNode* left;
+  HuffNode* right;
+  friend class Heap;
+};
+
+#endif

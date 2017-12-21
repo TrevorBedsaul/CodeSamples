@@ -1,0 +1,6 @@
+//Trevor Bedsaul
+//tdb7mw
+//8/29/17
+//vector.questions.txt
+
+1) Why do we need the #ifndef and #define if there is nowhere that we may get stuck in the loop of defining it over and over again?

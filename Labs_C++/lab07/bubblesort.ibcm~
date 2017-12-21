@@ -1,0 +1,5 @@
+      jmp    start    skip around variables
+i     dw     0        int i
+j     dw     0        int j
+one   dw     1
+n     dw     5        int n

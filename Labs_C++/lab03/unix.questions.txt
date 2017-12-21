@@ -1,0 +1,6 @@
+//Trevor Bedsaul
+//tdb7mw
+//9/10/17
+//unix.questions.txt
+
+When I do most of the commands and test these things, it never involves a percentage symbol. In fact, that sometimes doesn't even act as a command. Also, when I push enter when typing things in using the "cat" command, it automatically does what cntrl D does. However, it prints it out on the next line in that scenario, but if I never push enter, and just push cntrl D, then it prints it back out on the same line. Is enter still doing the same thing as cntrl D, or am I misunderstanding something?

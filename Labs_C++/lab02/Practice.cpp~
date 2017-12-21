@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int* i = new int(4);
+  cout << "i = " << i;
+  cout << "i = " << *i;
+  delete i;
+  cout << "i = " << i;
+  cout << "i = " << *i;
+}

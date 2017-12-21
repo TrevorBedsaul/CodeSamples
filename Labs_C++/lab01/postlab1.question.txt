@@ -1,0 +1,6 @@
+//Trevor Bedsaul
+//tdb7mw
+//8/30/17
+//postlab1.question.txt
+
+Still a little confused on pointers, but I think I can figure out most of that from lecture. My main question is what does it mean where you say "friend class Fsm;"? Does that have to do with inheritting parts of another class?

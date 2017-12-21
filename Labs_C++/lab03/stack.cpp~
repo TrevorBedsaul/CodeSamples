@@ -1,0 +1,9 @@
+//Trevor Bedsaul
+//tdb7mw
+//9/12/17
+//stack.cpp
+
+#include <iostream>
+#include <cstdlib>
+#include "stack.h"
+using namespace std;

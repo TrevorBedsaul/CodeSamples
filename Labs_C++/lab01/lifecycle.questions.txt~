@@ -1,0 +1,8 @@
+//Trevor Bedsaul
+//tdb7mw
+//8/29/17
+//LifeCycle.cpp
+
+When commenting out the prototype, the error produced says that there is an out-of-line definition because it was never declared in the header file basically.
+
+1) Why is it that we have to have using namespace std at the top of the files? What does that do? I didn't have it in at first and it caused tons of problems.

@@ -1,0 +1,11 @@
+	;; Parameter 1 (in rdi) is first int
+	;; Parameter 2 (in rsi) is second int
+	
+	global mathlib
+
+	section .text
+
+product:
+	;; Prologue
+	xor rax, rax 		; zero out return register
+	xor r10, r10 		; zero out counter i

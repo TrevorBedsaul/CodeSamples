@@ -1,0 +1,13 @@
+#include <iostream>
+
+class A {
+  virtual void foo() {
+    cout << "A method" << endl;
+  }
+}
+class B : public A {
+  virtual void foo() {
+    cout << "B method" << endl;
+  }
+}
+    

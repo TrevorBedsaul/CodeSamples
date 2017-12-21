@@ -1,0 +1,6 @@
+character 'a' has prefix code '0'
+character 'd' has prefix code '10'
+character 'b' has prefix code '110'
+character 'c' has prefix code '111'
+All the bits: 1011001110010
+dbacaad

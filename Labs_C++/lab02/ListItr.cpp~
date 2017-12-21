@@ -1,0 +1,59 @@
+//Trevor Bedsaul
+//tdb7mw
+//9/2/17
+//ListItr.cpp
+
+#include <iostream>
+#include "ListItr.h"
+using namespace std;
+
+//------------------------------------------Default Constructor
+ListItr::ListItr() {
+  current = new ListNode();
+}
+
+//------------------------------------------One parameter constructor
+ListItr::ListItr(ListNode* theNode) {
+  current = theNode;
+  current->value = theNode->value;
+}
+
+//------------------------------------------Returns true if past end position in list, else false
+bool ListItr::isPastEnd() const {
+  if (current->next == NULL)
+    return true;
+  return false;
+}
+
+//------------------------------------------Returns true if past first position in list, else false
+bool ListItr::isPastBeginning() const {
+  if (current->previous == NULL)
+    return true;
+  return false;
+}
+
+//------------------------------------------Advances current to next position in list (unless already past end of list)
+void ListItr::moveForward() {
+  if(!isPastEnd())
+    current = current->next;
+}
+
+//------------------------------------------Moves current back to previous position unless already past beginning of list)
+void ListItr::moveBackward() {
+  if (!isPastBeginning())
+    current = current->previous;
+}
+
+//------------------------------------------Returns item in current position
+int ListItr::retrieve() const {
+  return current->value;
+}
+
+void printList(List& source, bool direction) {
+  //  ListItr iter(source.head->next);
+  //  while (!iter.isPastEnd()) {
+  //    cout << iter.retrieve() << " ;
+  // }
+
+  cout << "List Printed Here" << endl;
+}

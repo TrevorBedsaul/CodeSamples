@@ -1,0 +1,83 @@
+000        jmp    start    skip around variables
+001 i      dw     0        int i
+002 j      dw     4        int j
+003 tmp    dw     0        int tmp
+004 a[j]   dw     0        int a[j]
+005 a[j-1] dw     0        int a[j-1]
+006 one    dw     1
+007 n      dw     5        int n
+008 a      dw              int a[]
+009 a[0]   dw     0        int a[0]
+00A a[1]   dw     0        int a[1]
+00B a[2]   dw     0        int a[2]
+00C a[3]   dw     0        int a[3]
+00D a[4]   dw     0        int a[0]
+00E ldit   dw     3000
+00F stoit  dw     4000
+010
+011
+012
+013
+014 start  readH
+015        store  a[0]
+016        readH
+017        store a[1]
+018        readH
+019        store a[2]
+01A        readH
+01B        store a[3]
+01C        readH
+01D        store a[4]
+01E loop   load   n        if( i >= n ) goto xit3
+01F        sub    i
+020        jmpl   xit3
+021        jmpe   xit3
+022 loop2  load   j        if( i >= j ) goto xit2
+023        sub    i
+024        jmpl   xit2
+025        jmpe   xit2
+026        load   ldit     plant instruction for load a[j]
+027        add    a
+028        add    j
+029        store  doit
+02A        load   stoit    plant instruction to store in a[j]
+02B        add    a
+02C        add    j
+02D        store  doit3
+02E doit   dw     0       
+02F        store  tmp      temp = a[j]
+030        load   ldit     plant instruction for load a[j-1]
+031        add    a
+032        add    j
+033        sub    one
+034        store  doit2
+035        load   stoit    plant instruction for store in a[j-1]
+036        add    a
+037        add    j
+038        sub    one
+039        store  doit4
+03A doit2  dw     0        if( a[j] >= [j-1] ) goto xit1
+03B sub    tmp
+03C        jmpl   xit
+03D        jmpe   xit
+03E        add    tmp
+03F doit3  dw     0        a[j] = a[j-1]
+040        load   tmp
+041 doit4  dw     0        a[j-1] = tmp
+042 xit1   load   j        j -= 1
+043        sub    one
+044        store  j
+045        jmp    loop2
+046 xit2   load   i        i += 1
+047        add    one
+048        store  i
+049        jmp    loop1
+04A xit3   load   a[0]
+04B        printH
+04C        load   a[1]
+04D        printH
+04E        load   a[2]
+04F        printH
+050        load   a[3]
+051        printH
+052        load   a[4]

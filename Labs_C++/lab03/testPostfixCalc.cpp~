@@ -1,0 +1,31 @@
+//Trevor Bedsaul
+//tdb7mw
+//9/10/17
+//testPostfixCalc.cpp
+
+#include <iostream>
+#include <stack>
+#include "postfixCalculator.h"
+using namespace std;
+
+int main ( ) {
+  PostfixCalculator p;
+  p.pushNum(1);
+  p.pushNum(2);
+  p.subtract(); // = -1
+  cout << "Result: " << p.getTopValue() << endl;
+  p.pushNum(6);
+  p.pushNum(-7);
+  p.pushNum(4);
+  p.pushNum(0);
+  p.multiply(); // = 0
+  cout << "Result: " << p.getTopValue() << endl;
+  p.add(); // = -7
+  cout << "Result: " << p.getTopValue() << endl;
+  p.negate();  // = 7
+  cout << "Result: " << p.getTopValue() << endl;
+  p.divide(); // = 0
+  cout << "Result: " << p.getTopValue() << endl;
+  p.add(); // = -1
+  cout << "Result: " << p.getTopValue() << endl;
+}

@@ -1,0 +1,10 @@
+//Trevor Bedsaul
+//tdb7mw
+//9/12/17
+//difficulties.txt
+
+1) A major problem I had was figuring out how to set up the destructors. In fact, the way I left it may not have been the best in terms of deleting things in destructors. I plan to research more into when it is okay to delete and when it is not. As of now, whenever I have lots of delete statements in my code, it ends up causing segmentation faults.
+
+2) Another problem that took a while to overcome was #include -ing the correct things and friend classes with the correct classes. It took me awhile to realize that the stack class has to be friend classes with stacknode so that it can access the private variable "value".
+
+3) I expected to have many problems with pointers, but I actually did not at all. At one point I thought I had a problem with a pointer and setting it to NULL, but it was actually just a mistake when I was saying "null" instead of "NULL" because of confusion with Java.
